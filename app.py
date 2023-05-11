@@ -430,4 +430,4 @@ api.add_resource(Week, "/Week", "/Week/", "/Week/<string:id>")
 api.add_resource(Time, "/time", "/Time/", "/Time/<string:id>")
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True)
