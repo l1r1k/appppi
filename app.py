@@ -19,7 +19,7 @@ def click():
     groups = []
     ruquest_schedule = requests.get(URL)
     request_change_schedule = requests.get(URL_CHANGE_SCHEDULE)
-    print(ruquest_schedule.status_code + 'OK')
+    print(f'{ruquest_schedule.status_code} OK')
     print(request_change_schedule.status_code)
     soup = bs(ruquest_schedule.text, "html.parser")
     soup_change_schedule = bs(request_change_schedule.text, "html.parser")
