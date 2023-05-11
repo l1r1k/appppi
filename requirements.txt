@@ -1,0 +1,8 @@
+flask==2.2.3
+flask_restful==0.3.9
+requests==2.27.1
+beautifulsoup4==4.10.0
+pathlib
+json
+os
+gunicorn
