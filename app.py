@@ -390,10 +390,12 @@ class ChangedSchedule(Resource):
         changed_schedule = json.loads(read_changed_schedule)
         if id == '0':
             return changed_schedule, 200
-        if (id[:-1] in changed_schedule[0]['dicts'] and id[-1] == '1'):
-            return changed_schedule[0]['dicts'].get(id[:-1]), 200
-        elif (id[:-1] in changed_schedule[1]['dicts'] and id[-1] == '2'):
-            return changed_schedule[1]['dicts'].get(id[:-1]), 200
+        if (len(changed_schedule) > 0):
+            if (id[:-1] in changed_schedule[0]['dicts'] and id[-1] == '1'):
+                return changed_schedule[0]['dicts'].get(id[:-1]), 200
+        if (len(changed_schedule) > 1):
+            if (id[:-1] in changed_schedule[1]['dicts'] and id[-1] == '2'):
+                return changed_schedule[1]['dicts'].get(id[:-1]), 200
             
         return "Quote not found", 404
     
