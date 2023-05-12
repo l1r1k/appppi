@@ -355,14 +355,12 @@ def click():
     pathlib.Path(os.path.abspath("fullinfo.json")).write_text(full_info, encoding="utf-8")
 
 
+click()
 app = Flask(__name__)
 api = Api(app)
-      
-
 
 class Quote(Resource):
     def get(self,id='0'):
-        click()
         read_groups = pathlib.Path(os.path.abspath("info.json")).read_text(encoding="utf-8")
 
         groups = json.loads(read_groups)
@@ -375,7 +373,6 @@ class Quote(Resource):
     
 class Schedule(Resource):
     def get(self,id='0'):
-        click()
         read_schedule = pathlib.Path(os.path.abspath("schedule.json")).read_text(encoding="utf-8")
 
         schedule = json.loads(read_schedule)
@@ -388,7 +385,6 @@ class Schedule(Resource):
     
 class ChangedSchedule(Resource):
     def get(self,id='0'):
-        click()
         read_changed_schedule = pathlib.Path(os.path.abspath("changedschedule.json")).read_text(encoding="utf-8")
 
         changed_schedule = json.loads(read_changed_schedule)
@@ -401,7 +397,6 @@ class ChangedSchedule(Resource):
     
 class Week(Resource):
     def get(self,id='Неделя'):
-        click()
         read_week = pathlib.Path(os.path.abspath("week.json")).read_text(encoding="utf-8")
 
         week = json.loads(read_week)
@@ -411,7 +406,6 @@ class Week(Resource):
     
 class Time(Resource):
     def get(self,id='0'):
-        click()
         read_time = pathlib.Path(os.path.abspath("timeschedule.json")).read_text(encoding="utf-8")
 
         time = json.loads(read_time)
