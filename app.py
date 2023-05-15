@@ -164,7 +164,7 @@ def click():
 
     allGroups['Отделение первого курса'] = groups1kurs
 
-    week = {'Неделя': current_week_from_html}  
+    week_legend = {'Неделя': current_week_from_html}  
 
     def get_schedule(id: str, soup: bs):
         week = []
@@ -330,7 +330,7 @@ def click():
         class_item = items(item, time_schedule[item])
         time_class.append(class_item.__dict__)
 
-    class_item = items('Неделя', week['Неделя'])
+    class_item = items('Неделя', week_legend['Неделя'])
     week_class.append(class_item.__dict__)
         
 
