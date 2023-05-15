@@ -200,7 +200,7 @@ def click():
             for td_from_html in tr_from_html:
                 if td_from_html.find('div') is not None:
                     subject_str = td_from_html.find('td').text + ' '
-                    if week[0] == 'Числитель':
+                    if week_legend['Неделя'] == 'Числитель':
                         td_from_html = td_from_html.find_next('div', class_='label label-danger')
                         subject_str += td_from_html.text.strip() + ' '
                         td_from_html = td_from_html.find_next('div', class_='label label-danger')
